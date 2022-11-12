@@ -24,7 +24,18 @@ data.forEach(task=> {
 
     li.querySelector('button').addEventListener('click', e => {
 
-        console.warn("Você quer deleter o item ?");
+        let button = e.target;
+        let li = button.parentNode;
+        let input = li.querySelector('input'); 
+        let id = input.id;
+        let idArray = id.split('-');
+        let todoId = idArray[1];
+        
+
+        data = data.filter(task => task.id !== parseInt (todoId));
+       
+        renderTodo();
+
     });
 
     document.querySelector('.todo').append(li);
@@ -35,7 +46,6 @@ data.forEach(task=> {
 document.querySelector('#new-task').addEventListener('keyup', e => {
   
     if (e.key === 'Enter') {
-        console.log(e.target.value);
 
         data.push ({
             id: data.length+1,
@@ -43,6 +53,9 @@ document.querySelector('#new-task').addEventListener('keyup', e => {
         });
 
         e.target.value = "";
+
+        renderTodo();
+
     }
 });
 
