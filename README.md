@@ -8,8 +8,6 @@ Desenvolvido para aprendizado. Realizado durante aula de HTML na plataforma Hcod
 
 
 
-[🔗 Clique aqui para acessar] (https://michel-maia.github.io/Lista-de-tarefas-Hcode/)
-
 
 ## 💻 Tecnologias
 
